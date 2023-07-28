@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.2"
 	kotlin("jvm") version "1.8.22"
 	kotlin("plugin.spring") version "1.8.22"
+	kotlin("plugin.jpa") version "1.8.22"
 }
 
 group = "com.squireofsoftware"
@@ -22,6 +23,9 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.postgresql:postgresql")
+
 }
 
 tasks.withType<KotlinCompile> {
